@@ -1,137 +1,106 @@
-# 🏏 IPL Match Analysis & EDA
+# 🏏 IPL 2022 Match Analysis — Exploratory Data Analysis
 
-## 📌 Project Overview
+An EDA project on the **IPL 2022 season**, digging into 74 matches to understand team performance, toss trends, winning margins, and standout players — using Python, Pandas, Matplotlib, and Seaborn.
 
-This project performs **Exploratory Data Analysis (EDA) on IPL 2022 match data** to understand team performance, toss results, match outcomes, player performances, winning methods, and venue-wise trends.
+## 📌 Overview
 
-The project uses Python-based data analysis and visualization techniques to transform raw IPL match data into meaningful insights.
+This project explores match-level data from the 2022 Indian Premier League season to answer questions like:
 
----
-
-## 🎯 Objectives
-
-The main objectives of this project are:
-
-- Analyze team-wise match wins
-- Study the relationship between the toss winner and match winner
-- Analyze toss decisions
-- Identify top-performing players
-- Analyze winning margins and winning methods
-- Analyze match distribution across venues
-- Compare team performance across different venues
-- Identify important patterns and trends in IPL matches
-
----
+- Which teams won the most matches?
+- Does winning the toss actually help you win the match?
+- Do teams win more often by defending a total (runs) or chasing (wickets)?
+- Who were the standout batters, bowlers, and Player-of-the-Match winners?
+- Which venues hosted the most games?
 
 ## 📊 Dataset
 
-The dataset contains IPL 2022 match-level information.
-
-### Dataset Features
+The dataset (`IPL.csv`) contains **74 matches** and **20 columns**:
 
 | Column | Description |
 |---|---|
-| `match_id` | Unique match identifier |
-| `date` | Date of the match |
-| `venue` | Stadium where the match was played |
-| `team1` | First participating team |
-| `team2` | Second participating team |
-| `stage` | Tournament stage |
-| `toss_winner` | Team that won the toss |
-| `toss_decision` | Decision taken after winning the toss |
-| `first_ings_score` | First innings score |
-| `first_ings_wkts` | Wickets lost in first innings |
-| `second_ings_score` | Second innings score |
-| `second_ings_wkts` | Wickets lost in second innings |
-| `match_winner` | Team that won the match |
-| `won_by` | Method of victory |
-| `margin` | Winning margin |
-| `player_of_the_match` | Player receiving Player of the Match |
-| `top_scorer` | Top scorer of the match |
-| `highscore` | Highest individual score |
-| `best_bowling` | Best bowling performer |
-| `best_bowling_figure` | Best bowling figure |
+| `match_id`, `date`, `venue`, `stage` | Match metadata |
+| `team1`, `team2` | Teams competing |
+| `toss_winner`, `toss_decision` | Toss result and decision (bat/field) |
+| `first_ings_score`, `first_ings_wkts` | 1st innings score & wickets |
+| `second_ings_score`, `second_ings_wkts` | 2nd innings score & wickets |
+| `match_winner`, `won_by`, `margin` | Result of the match |
+| `player_of_the_match` | Player awarded POTM |
+| `top_scorer`, `highscore` | Top run-scorer of the match & their score |
+| `best_bowling`, `best_bowling_figure` | Best bowler of the match & figures |
 
----
+No missing values or duplicate rows were found in the dataset.
 
-## 🛠️ Technologies Used
+## 🛠️ Tools & Libraries
 
-- **Python**
-- **Pandas** – Data cleaning and analysis
-- **NumPy** – Numerical operations
-- **Matplotlib** – Data visualization
-- **Seaborn** – Statistical visualization
-- **Jupyter Notebook** – Analysis environment
-
----
-
-## 🔍 Analysis Performed
-
-### 1. Team Performance
-Analyzed the number of matches won by each team to compare overall team performance.
-
-### 2. Toss Analysis
-Studied:
-- Toss-winning teams
-- Toss decisions
-- Relationship between toss winner and match winner
-
-### 3. Match Winning Analysis
-Analyzed:
-- Teams with the most wins
-- Winning methods
-- Winning margins
-
-### 4. Player Performance
-Analyzed:
-- Player of the Match awards
-- Top scorers
-- Highest individual scores
-- Best bowling performances
-
-### 5. Venue Analysis
-Analyzed:
-- Number of matches played at each stadium
-- Team wins at different venues
-- Venue-wise team performance
-
----
-
-## 📈 Visualizations
-
-The project includes visualizations such as:
-
-- Team-wise match wins
-- Toss decision distribution
-- Toss winner vs match winner
-- Winning methods
-- Player of the Match analysis
-- Top scorer analysis
-- Venue-wise match distribution
-- Venue-wise team wins
-- Batting and bowling performance analysis
-
----
-
-## 💡 Key Insights
-
-Some important observations from the analysis include:
-
-- Winning the toss does not always result in winning the match.
-- Match wins are distributed differently among teams.
-- Teams use different strategies after winning the toss.
-- Certain players had a higher number of Player of the Match awards.
-- Match distribution varies across venues.
-- Venue-wise analysis provides additional insight into team performance.
-
----
+- **Python 3**
+- **Pandas** – data loading, cleaning, aggregation
+- **NumPy** – numerical operations
+- **Matplotlib** & **Seaborn** – visualization
 
 ## 📁 Project Structure
 
-```text
-IPL-Match-Analysis-EDA/
-│
-├── IPL.csv
-├── IPL_Match_Analysis.ipynb
-├── README.md
-└── .gitignore
+IPL-Match-Analysis/
+├── IPL_Match_Analysis.ipynb # Main analysis notebook
+├── IPL.csv # Dataset
+└── README.md # Project documentation
+
+
+## 🔍 Analysis Performed
+
+1. Initial data inspection (shape, dtypes, nulls, duplicates)
+2. Most match wins by team
+3. Toss decision trends (bat vs field)
+4. Toss winner vs. match winner
+5. How teams win — by runs vs. by wickets
+6. Most Player-of-the-Match awards
+7. Top 5 run-scorers of the tournament
+8. Top 5 bowling performances
+9. Most-used venues
+
+## 💡 Key Insights
+
+**1. Team Performance**
+Gujarat topped the standings with **12 wins**, followed by Rajasthan (10), and Bangalore and Lucknow (9 each). Chennai and Mumbai struggled, with only **4 wins each** — a sharp fall from their usual form in past seasons.
+
+**2. Toss Decision**
+Teams overwhelmingly chose to **field first** after winning the toss — **59 of 74 times (79.7%)**, versus only 15 choosing to bat. This points to chasing-friendly conditions across the season.
+
+**3. Toss Winner vs. Match Winner**
+Despite that strong preference, winning the toss barely translated into winning the match: the toss winner won only **36 of 74 games (48.6%)** — essentially a coin flip.
+
+**4. How Matches Were Won**
+Wins were split **exactly evenly — 37 by runs, 37 by wickets** — showing neither batting first nor chasing had a real structural edge this season.
+
+**5. Player of the Match**
+**Kuldeep Yadav** led with **4 POTM awards**, ahead of Jos Buttler (3), and Umesh Yadav, Quinton de Kock, and David Miller (2 each).
+
+**6. Top Run-Scorers**
+**Jos Buttler** was in a league of his own — **651 runs** across his top-scoring innings, nearly double the next best: Quinton de Kock (377), KL Rahul (351), Shubman Gill (288), and Faf du Plessis (257).
+
+**7. Venues**
+All matches were played across just **6 venues in Maharashtra, Kolkata, and Ahmedabad** (a neutral-venue format that season). **Wankhede Stadium, Mumbai** hosted the most matches — **21** — followed by Dr DY Patil Sports Academy (20) and Brabourne Stadium (16).
+
+## 🚀 How to Run
+
+```bash
+git clone https://github.com/<your-username>/IPL-Match-Analysis.git
+cd IPL-Match-Analysis
+pip install pandas numpy matplotlib seaborn jupyter
+jupyter notebook IPL_Match_Analysis.ipynb
+```
+
+## 📈 Sample Visuals
+
+The notebook includes bar charts and count plots for:
+- Most match wins by team
+- Toss decision trends
+- Toss winner vs. match winner outcome
+- Wins by runs vs. wickets
+- Top 5 batters and bowlers
+- Most-used venues
+
+#
+
+
+
+---
