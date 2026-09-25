@@ -1,3 +1,49 @@
+# 🏏 IPL 2022 Match Analysis — Exploratory Data Analysis
+
+An EDA project on the **IPL 2022 season**, digging into 74 matches to understand team performance, toss trends, winning margins, and standout players — using Python, Pandas, Matplotlib, and Seaborn.
+
+## 📌 Overview
+
+This project explores match-level data from the 2022 Indian Premier League season to answer questions like:
+
+- Which teams won the most matches?
+- Does winning the toss actually help you win the match?
+- Do teams win more often by defending a total (runs) or chasing (wickets)?
+- Who were the standout batters, bowlers, and Player-of-the-Match winners?
+- Which venues hosted the most games?
+
+## 📊 Dataset
+
+The dataset (`IPL.csv`) contains **74 matches** and **20 columns**:
+
+| Column | Description |
+|---|---|
+| `match_id`, `date`, `venue`, `stage` | Match metadata |
+| `team1`, `team2` | Teams competing |
+| `toss_winner`, `toss_decision` | Toss result and decision (bat/field) |
+| `first_ings_score`, `first_ings_wkts` | 1st innings score & wickets |
+| `second_ings_score`, `second_ings_wkts` | 2nd innings score & wickets |
+| `match_winner`, `won_by`, `margin` | Result of the match |
+| `player_of_the_match` | Player awarded POTM |
+| `top_scorer`, `highscore` | Top run-scorer of the match & their score |
+| `best_bowling`, `best_bowling_figure` | Best bowler of the match & figures |
+
+No missing values or duplicate rows were found in the dataset.
+
+## 🛠️ Tools & Libraries
+
+- **Python 3**
+- **Pandas** – data loading, cleaning, aggregation
+- **NumPy** – numerical operations
+- **Matplotlib** & **Seaborn** – visualization
+
+## 📁 Project Structure
+
+IPL-Match-Analysis-EDA/
+├── IPL_Match_Analysis.ipynb # Main analysis notebook
+├── IPL.csv # Dataset
+└── README.md # Project documentation
+
 
 ## 🔍 Analysis Performed
 
@@ -64,5 +110,3 @@ The notebook includes bar charts and count plots for:
 Made with 🏏 and Python by **Satyajeet**
 GitHub: [Satyajeet745](https://github.com/Satyajeet745)
 
----
-⭐ If you found this project useful, consider giving it a star!
