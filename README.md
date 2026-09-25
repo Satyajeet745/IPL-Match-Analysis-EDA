@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏏 IPL 2022 Match Analysis — Exploratory Data Analysis
 
 An EDA project on the **IPL 2022 season**, digging into 74 matches to understand team performance, toss trends, winning margins, and standout players — using Python, Pandas, Matplotlib, and Seaborn.
@@ -11,9 +12,76 @@ This project explores match-level data from the 2022 Indian Premier League seaso
 - Do teams win more often by defending a total (runs) or chasing (wickets)?
 - Who were the standout batters, bowlers, and Player-of-the-Match winners?
 - Which venues hosted the most games?
+=======
+🏏 IPL 2022 Match Analysis — Exploratory Data Analysis
 
-## 📊 Dataset
+An EDA project on the IPL 2022 season, digging into 74 matches to understand team performance, toss trends, winning margins, and standout players — using Python, Pandas, Matplotlib, and Seaborn.
 
+📌 Overview
+
+This project explores match-level data from the 2022 Indian Premier League season to answer questions like:
+
+Which teams won the most matches?
+Does winning the toss actually help you win the match?
+Do teams win more often by defending a total (runs) or chasing (wickets)?
+Who were the standout batters, bowlers, and Player-of-the-Match winners?
+Which venues hosted the most games?
+📊 Dataset
+
+The dataset (IPL.csv) contains 74 matches and 20 columns:
+
+Column	Description
+match_id, date, venue, stage	Match metadata
+team1, team2	Teams competing
+toss_winner, toss_decision	Toss result and decision (bat/field)
+first_ings_score, first_ings_wkts	1st innings score & wickets
+second_ings_score, second_ings_wkts	2nd innings score & wickets
+match_winner, won_by, margin	Result of the match
+player_of_the_match	Player awarded POTM
+top_scorer, highscore	Top run-scorer of the match & their score
+best_bowling, best_bowling_figure	Best bowler of the match & figures
+
+No missing values or duplicate rows were found in the dataset.
+
+🛠️ Tools & Libraries
+Python 3
+Pandas – data loading, cleaning, aggregation
+NumPy – numerical operations
+Matplotlib & Seaborn – visualization
+📁 Project Structure
+IPL-Match-Analysis/
+├── IPL_Match_Analysis.ipynb   # Main analysis notebook
+├── IPL.csv                    # Dataset
+└── README.md                  # Project documentation
+🔍 Analysis Performed
+Initial data inspection (shape, dtypes, nulls, duplicates)
+Most match wins by team
+Toss decision trends (bat vs field)
+Toss winner vs. match winner
+How teams win — by runs vs. by wickets
+Most Player-of-the-Match awards
+Top 5 run-scorers of the tournament
+Top 5 bowling performances
+Most-used venues
+💡 Key Insights
+Toss barely matters: The toss winner went on to win the match in only 36 of 74 games (48.6%) — statistically no better than a coin flip. Winning the toss is not a reliable predictor of match outcome.
+Bat vs. chase is a dead heat: Matches were won by runs (defending) exactly as often as by wickets (chasing) — 37 wins each — showing no strong first-innings/second-innings advantage across the season.
+Fielding first was the popular choice: Teams strongly preferred to field first after winning the toss, reflecting the season's chasing-friendly conditions.
+Jos Buttler dominated the bat: He was the tournament's leading run-getter among top-scorers, finishing well clear of the next-best batters (Quinton de Kock, KL Rahul, Shubman Gill, Faf du Plessis).
+Kuldeep Yadav led Player-of-the-Match awards, picking up 4 across the season — the most of any player.
+A handful of venues hosted the bulk of matches, with Mumbai and Kolkata's stadiums among the most frequently used.
+🚀 How to Run
+bash
+git clone https://github.com/<your-username>/IPL-Match-Analysis.git
+cd IPL-Match-Analysis
+pip install pandas numpy matplotlib seaborn jupyter
+jupyter notebook IPL_Match_Analysis.ipynb
+📈 Sample Visuals
+>>>>>>> 0c9409d (Update README)
+
+The notebook includes bar charts and count plots for:
+
+<<<<<<< HEAD
 The dataset (`IPL.csv`) contains **74 matches** and **20 columns**:
 
 | Column | Description |
@@ -104,3 +172,19 @@ The notebook includes bar charts and count plots for:
 
 
 ---
+=======
+Most match wins by team
+Toss decision trends
+Toss winner vs. match winner outcome
+Wins by runs vs. wickets
+Top 5 batters and bowlers
+Most-used venues
+🔮 Future Improvements
+Add team-vs-team head-to-head breakdown
+Bring in ball-by-ball data for deeper player analysis
+
+
+🙋‍♂️ Author
+Made with 🏏 and Python by [Satyajit Kahandal] Feel free to connect on LinkedIn or check out more projects on GitHub.
+
+>>>>>>> 0c9409d (Update README)
