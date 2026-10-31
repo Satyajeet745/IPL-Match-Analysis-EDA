@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 # 🏏 IPL 2022 Match Analysis — Exploratory Data Analysis
+=======
+🏏 Turns out winning the toss in IPL 2022 was basically a coin flip when it came to actually winning the match. Here's what I found analyzing all 74 games of the season.
+>>>>>>> 2e96e5e (Update IPL analysis and README)
 
-An EDA project on the **IPL 2022 season**, digging into 74 matches to understand team performance, toss trends, winning margins, and standout players — using Python, Pandas, Matplotlib, and Seaborn.
+📊 About the project:
+Dataset of all 74 matches from IPL 2022, covering toss results, innings scores, match winners, margins, Player of the Match, top scorers, and best bowling figures — 20 features in total, no missing data or duplicates.
 
-## 📌 Overview
+🛠️ Tools used:
+Python, Pandas & NumPy for cleaning and aggregation, Matplotlib & Seaborn for visualization.
 
-This project explores match-level data from the 2022 Indian Premier League season to answer questions like:
+💡 Key insights:
 
+<<<<<<< HEAD
 - Which teams won the most matches?
 - Does winning the toss actually help you win the match?
 - Do teams win more often by defending a total (runs) or chasing (wickets)?
@@ -109,4 +116,31 @@ The notebook includes bar charts and count plots for:
 
 Made with 🏏 and Python by **Satyajeet**
 GitHub: [Satyajeet745](https://github.com/Satyajeet745)
+
+=======
+1️⃣ Toss ≠ advantage
+The toss winner won the match only 48.6% of the time (36/74 games) — statistically no better than a coin flip.
+
+2️⃣ Everyone wanted to chase, but it didn't matter
+Teams chose to field first after winning the toss 59 out of 74 times. Yet wins were split exactly 50/50 between defending (37) and chasing (37) — the "chase advantage" wasn't real in 2022.
+
+3️⃣ Big drop for the usual heavyweights
+Gujarat topped the table with 12 wins, while Chennai and Mumbai — historically two of the strongest franchises — each managed only 4.
+
+4️⃣ One batter, way ahead of the pack
+Jos Buttler scored 651 runs across his top-scoring innings — nearly double the next best, Quinton de Kock (377).
+
+5️⃣ Most consistent match-winner
+Kuldeep Yadav led all players with 4 Player-of-the-Match awards for the season.
+
+6️⃣ Venues were concentrated, not spread out
+All 74 matches were played across just 6 venues in Maharashtra, Kolkata & Ahmedabad. Wankhede Stadium, Mumbai hosted the most — 21 matches.
+
+This was a great exercise in asking the data real questions instead of just making charts — especially the toss vs. win-rate finding, which challenged my assumption going in.
+
+🔗 Full code, charts & write-up on GitHub: [https://github.com/Satyajeet745/IPL-Match-Analysis-EDA]
+
+📝 This is one of my early data analysis projects, and I'm actively looking to improve — if you spot something I could've analyzed differently, a metric I missed, or better ways to present this, please drop it in the comments. Genuinely appreciate any feedback, big or small!
+
+#Python #DataAnalysis #EDA #IPL2022 #Pandas #Matplotlib #Seaborn #DataScience #Cricket #SportsAnalytics
 
